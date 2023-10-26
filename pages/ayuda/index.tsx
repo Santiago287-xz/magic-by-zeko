@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { FormEvent } from "react";
 
 export default function Page() {
   return (
@@ -12,7 +11,7 @@ export default function Page() {
           <p className="uppercase text-center tracking-[0.16em] text-foreground-700">
             FAQS
           </p>
-          <h1 className="text-lg md:text-xl lg:text-5xl text-center tracking-wide text-foreground-800">
+          <h1 className="text-lg md:text-xl lg:text-5xl text-center tracking-wide text-foreground-800 mb-16">
             ¿En que te podemos ayudar?
           </h1>
           <Accordion>

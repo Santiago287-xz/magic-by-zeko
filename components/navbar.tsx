@@ -12,7 +12,6 @@ import {
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -24,12 +23,12 @@ const darkLogoURL =
   "https://media.discordapp.net/attachments/1116888339967119460/1157748996069142618/image.png?ex=6519bd46&is=65186bc6&hm=d26b0960292e3c8675c97108275e1580d50cb79fb9ad036a88c4e28c5d260940&=&width=354&height=473";
 
 export const Navbar = () => {
-  const [imageUrl, setImageUrl] = useState('');
+  const [imageUrl, setImageUrl] = useState("");
   const { theme } = useTheme();
 
   useEffect(() => {
     const imageUrl = theme === "light" ? lightLogoURL : darkLogoURL;
-    setImageUrl(imageUrl)
+    setImageUrl(imageUrl);
   }, [theme]);
 
   return (
@@ -79,23 +78,15 @@ export const Navbar = () => {
 
         <NavbarMenu>
           <div className="mx-4 mt-2 flex flex-col gap-2">
-            {siteConfig.navMenuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  color={
-                    index === 2
-                      ? "primary"
-                      : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                  }
-                  href="#"
-                  size="lg"
-                >
-                  {item.label}
-                </Link>
-              </NavbarMenuItem>
-            ))}
+            <NavbarMenuItem>
+              {siteConfig.navItems.map((item) => (
+                <NavbarItem key={item.href}>
+                  <Link color="foreground" className="py-2" href={item.href} size="lg">
+                    {item.label}
+                  </Link>
+                </NavbarItem>
+              ))}
+            </NavbarMenuItem>
           </div>
         </NavbarMenu>
       </NextUINavbar>

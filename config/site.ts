@@ -17,20 +17,6 @@ export const siteConfig = {
       href: "/ayuda",
     },
   ],
-  navMenuItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Tienda",
-      href: "/tienda/prod_OgaEMmLdWZvxde",
-    },
-    {
-      label: "Ayuda",
-      href: "/ayuda",
-    },
-  ],
   links: {
     twitter: "https://twitter.com/MagicByZeko",
     instagram: "https://www.instagram.com/magicbyzeko/"
