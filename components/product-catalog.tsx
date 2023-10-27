@@ -1,6 +1,7 @@
 import ProductCard from "@/components/product-card";
+import { type Product } from "@/pages/types.d";
 
-export default function ProductCatalog({ posts }) {
+export default function ProductCatalog({ posts }: { posts: Array<Product> }) {
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pb-12">
       <div className="flex flex-wrap flex-row content-center justify-center w-11/12">
@@ -18,7 +19,7 @@ export default function ProductCatalog({ posts }) {
           </div>
         </div>
         {posts.map((product) => (
-          <ProductCard key={product.id} data={product} />
+          <ProductCard key={product._id} data={product} />
         ))}
       </div>
     </section>
