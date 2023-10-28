@@ -2,10 +2,10 @@ import { Button, Link, Image } from "@nextui-org/react";
 import MailForm from "@/components/mail-form";
 import { TwitterIcon, InstagramIcon } from "@/components/icons";
 
-export default function Footer() {
+export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
   return (
     <>
-    <MailForm/>
+      <MailForm showAllInputs={showAllInputs} />
       <footer className="w-full flex flex-col items-center pb-6 pt-6 gap-5 bg-[#141a1f]">
         <div className="w-4/5 md:w-8/12">
           <div className="flex flex-col gap-2 items-center lg:flex-row lg:justify-evenly lg:items-start w-full">

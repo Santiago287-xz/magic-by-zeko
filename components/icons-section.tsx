@@ -11,20 +11,16 @@ export default function IconsSection() {
         </li>
         <li className="flex flex-col items-center text-slate-200">
           <MiraIcon className="text-center" />
-          <p className="mt-4 text-lg font-bold text-slate-200">
-            Hecho para precision
-          </p>
+          <h6 className="mt-4 text-lg font-bold text-slate-200">Hecho para precision</h6>
           <p className="mt-2 text-slate-400">Ergonomía excepcional</p>
         </li>
-
-        <li className="flex flex-col items-center text-slate-200">
-          <PadCheckIcon />
-          <h6 className="mt-4 text-lg font-bold">Mayor durabilidad</h6>
-          <p className="mt-2 text-slate-400">Construcción sólida</p>
-        </li>
-
         <li className="flex flex-col items-center text-slate-200">
           <LineIcon />
+          <h6 className="mt-4 text-lg font-bold">Mejor Deslizamiento</h6>
+          <p className="mt-2 text-slate-400">Precisión insuperable</p>
+        </li>
+        <li className="flex flex-col items-center text-slate-200">
+          <PadCheckIcon />
           <h6 className="mt-4 text-lg font-bold">Mejor Deslizamiento</h6>
           <p className="mt-2 text-slate-400">Precisión insuperable</p>
         </li>

@@ -51,7 +51,7 @@ export interface Discount {
 
 export interface Media {
   mainMedia: mainMedia;
-  items:     string;
+  items:     Array;
 }
 
 export interface mainMedia {

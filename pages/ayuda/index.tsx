@@ -87,7 +87,7 @@ export default function Page() {
           </Accordion>
         </section>
       </main>
-      <Footer />
+      <Footer showAllInputs={true}/>
     </>
   );
 }

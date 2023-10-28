@@ -1,9 +1,8 @@
 import React from "react";
 import { Image, Link } from "@nextui-org/react";
-import { products } from '@wix/stores';
+import { products } from "@wix/stores";
 
-
-export default function ProductCard({ data }: { data: products.Product }) {
+export default function TestCard({ data, color }: { data: products.Product, color: string }) {
   return (
     <>
       <div
@@ -11,7 +10,7 @@ export default function ProductCard({ data }: { data: products.Product }) {
         className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
       >
         <div className="font-medium inline m-auto text-center">
-          <p className="uppercase text-m tracking-[0.16em]">{data.name} Red</p>
+          <p className="uppercase text-m tracking-[0.16em]">{data.name} {color}</p>
           <h3 className="text-4xl font-normal">{data.description}</h3>
         </div>
         <Link
@@ -26,11 +25,17 @@ export default function ProductCard({ data }: { data: products.Product }) {
             <span>{data.price!.price}</span>
           </b>
           <Image
-            alt={data.name!}
-            src={data.media!.mainMedia!.image!.url}
-            className="z-0 h-4/5 object-cover hover:scale-105"
-          />
-        </Link>
+          alt={data.name!}
+          src={
+        color === 'Black'
+          ? 'https://media.discordapp.net/attachments/1019381524149305426/1165122987087900692/mousepad-black-3.png?ex=6545b457&is=65333f57&hm=b97968d9da593bb97d65763980dcfcc5a7fc63131578e3c4e7c9fe39124eb312&=&width=472&height=473'
+          : color === 'Azul'
+          ? 'https://media.discordapp.net/attachments/1019381524149305426/1165122988228739162/mousepad-blue-3.png?ex=6545b457&is=65333f57&hm=4a6d83a61bdf8a205e8e1088e999f2bab872f951dd8039b6ba9c2aed38364ebd&=&width=473&height=472'
+          : ""
+      }
+      className="z-0 h-4/5 object-cover hover:scale-105"
+    />
+  </Link>
       </div>
     </>
   );

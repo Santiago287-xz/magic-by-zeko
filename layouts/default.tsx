@@ -22,7 +22,7 @@ export default function DefaultLayout({
             {children}
           </main>
         </div>
-        <Footer/>        
+        <Footer showAllInputs={false}/>        
       </div>
     </div>
   );
