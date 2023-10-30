@@ -2,7 +2,7 @@ import ProductCard from "@/components/product-card";
 import TestCard from "@/components/test-card"
 import { products } from '@wix/stores';
 
-export default function ProductCatalog({ posts }: { posts: Array<products.Product> }) {
+export default function ProductCatalog({ posts }: { posts: products.Product[] }) {
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pb-12">
       <div className="flex flex-wrap flex-row content-center justify-center w-11/12">
@@ -23,7 +23,7 @@ export default function ProductCatalog({ posts }: { posts: Array<products.Produc
           <ProductCard key={product._id} data={product} />
         ))}
         {posts.map((product) => (
-        <TestCard key={product._id} data={product} color='Black'/>
+        <TestCard key={product._id} data={product} color='Red'/>
         ))}
         {posts.map((product) => (
         <TestCard key={product._id} data={product} color='Azul'/>

@@ -1,9 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { checkout as checkoutTypes } from "@wix/ecom";
-import { getWixClient } from "@/pages/hooks/useWixClientServer";
+import { getWixClient } from "@/hooks/useWixClientServer";
 
-export default async function handler(req: NextRequest, res: NextResponse) {
-  const productId = req.query.productId;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const productId: string = req.query.productId as string;
   const STORES_APP_ID = "1380b703-ce81-ff05-f115-39571d94dfcd";
 
   const requestUrl = "http://localhost:3000" + req.url;

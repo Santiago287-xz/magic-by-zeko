@@ -97,57 +97,73 @@ export default function ProductAllData({
     }`;
   }, [selectedOptions, selectedVariant, selected_product._id, quantity]);
   const images = selected_product.media!.items;
-  // const images = [selected_product.media?.mainMedia];
-  console.log(selected_product);
   return (
-    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-center md:p-16 md:pt-0 rounded-lg w-full xl:w-4/5 m-auto">
-      <div className="rounded-lg mt-8 mx-auto">
-        <div className="max-w-[38rem] rounded-lg w-auto m-auto">
-          <Splide aria-label="Products">
-            {images!.map((media, index) => (
-              <SplideSlide key={index} className="flex justify-center">
-                <Image
-                  removeWrapper
-                  alt={media.image?.url}
-                  src={media.image?.url}
-                  className="z-0 object-cover w-auto max-h-[28rem]"
-                />
-              </SplideSlide>
-            ))}
-          </Splide>
+    <section className="grid max-w-[80rem] justify-center items-start md:grid-cols-2 md:grid-rows-3 md:p-8 py-8 rounded-lg w-full xl:w-4/5 m-auto">
+      <div className="max-w-[38rem] rounded-lg w-auto m-auto col-start-1 col-end-1 md:row-start-1 md:row-end-3">
+        <Splide
+          options={{
+            type: "loop",
+            perMove: 1,
+            loop: true,
+            autoplay: true,
+            interval: 5000,
+            drag: true,
+            updateOnMove: true,
+          }}
+          aria-label="Products"
+        >
+          {images!.map((media, index) => (
+            <SplideSlide key={index} className="flex justify-center">
+              <Image
+                removeWrapper
+                alt={media.image?.url}
+                src={media.image?.url}
+                className="z-0 object-cover w-auto max-h-[28rem]"
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+
+      <div className="text-center row-start-1 md:col-start-2 md:col-end-2 md:row-start-1 md:row-end-2">
+        <span className="uppercase text-3xl tracking-[0.16em] text-foreground-600">
+          {selected_product.name + " " + selectedOptions.Color}
+        </span>
+        <h3 className="text-2xl md:text-4xl lg:text-5xl font-normal">
+          {selected_product.name}
+        </h3>
+        <p className="p-8 hidden md:block">{selected_product.description}</p>
+      </div>
+
+      <footer className="flex justify-around p-4 row-start-4 md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-3">
+        <div className="flex content-end flex-wrap">
+          <ButtonCheckout
+            buy_now_link={buyNowLink}
+            inStock={isAvailableForPurchase!}
+          />
         </div>
-        <footer className="flex justify-around p-4">
-          <div className="flex content-end flex-wrap">
-            <ButtonCheckout
-              buy_now_link={buyNowLink}
-              inStock={isAvailableForPurchase!}
-            />
-          </div>
-          <p className="text-xl text-foreground/70 grid text-end">
-            Total price
-            {selected_product.price!.formatted!.discountedPrice ==
-            selected_product.price!.formatted!.price ? null : (
+        <p className="text-xl text-foreground/70 grid text-end">
+          Total price
+          {selected_product.price!.formatted!.discountedPrice ==
+          selected_product.price!.formatted!.price ? (
+            <b className={"text-green-500 text-2xl"}>
+              {selected_product.price!.formatted!.discountedPrice}
+            </b>
+          ) : (
+            <>
               <b className="text-red-500 text-lg line-through">
+                {selected_product.price!.formatted!.price}
+              </b>
+              <b className={"text-green-500 text-2xl"}>
                 {selected_product.price!.formatted!.discountedPrice}
               </b>
-            )}
-            <b className={"text-green-500 text-2xl"}>
-              {selected_product.price!.formatted!.price}
-            </b>
-          </p>
-        </footer>
-      </div>
-      <article className="sm:p-8 w-auto lg:w-2/5">
-        <div className="text-center">
-          <span className="uppercase text-3xl tracking-[0.16em] text-foreground-600">
-            {selected_product.name + " " + selectedOptions.Color}
-          </span>
-          <h3 className="text-2xl md:text-4xl lg:text-5xl font-normal">
-            {selected_product.name}
-          </h3>
-          <p className="py-12">{selected_product.description}</p>
-        </div>
-        <Divider />
+            </>
+          )}
+        </p>
+      </footer>
+
+      <div className="md:col-start-2 md:col-end-2 md:row-start-2 md:row-end-4">
+        <Divider className="hidden md:block" />
         <h4 className="pt-4 text-center font-medium text-lg">
           Seleccionar color
         </h4>
@@ -156,8 +172,8 @@ export default function ProductAllData({
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
         />
-        <div className="flex flex-col gap-4 justify-center items-center sm:flex-row sm:gap-4 sm:justify-evenly"></div>
-      </article>
+      </div>
+      <div className="flex flex-col gap-4 justify-center items-center sm:flex-row sm:gap-4 sm:justify-evenly"></div>
     </section>
   );
 }

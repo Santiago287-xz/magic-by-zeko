@@ -24,8 +24,8 @@ export const ProductOptions: React.FC<ProductOptionsProps> = ({
   };
   return (
     <>
-      {options.map((opt) => (
-        <div className="mb-12" key={opt.name}>          
+      {options.map((opt) => (    
+        <div className="mb-12" key={opt.name}>    
           <div
             role="listbox"
             className="flex flex-row justify-center gap-2 my-2 relative"
@@ -35,20 +35,20 @@ export const ProductOptions: React.FC<ProductOptionsProps> = ({
                 const active = selectedOptions[opt.name!];
                 return (
                   <Swatch
+                    inStock={v.inStock!}
                     key={`${v}-${i}`}
                     active={v.description === active}
                     variant={v.description}
                     color={v.value}
                     label={v.description}
                     onClick={() => setSelected({ [opt.name!]: v.description! })}
-                  />
+                  />                  
                 );
-              })}
+              })}   
             {opt.optionType !== 'color' && (
               <Option
                 option={opt}
                 onChange={setSelected}
-                selectedOption={selectedOptions[opt.name!]}
               />
             )}
           </div>

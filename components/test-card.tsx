@@ -2,7 +2,13 @@ import React from "react";
 import { Image, Link } from "@nextui-org/react";
 import { products } from "@wix/stores";
 
-export default function TestCard({ data, color }: { data: products.Product, color: string }) {
+export default function TestCard({
+  data,
+  color,
+}: {
+  data: products.Product;
+  color: string;
+}) {
   return (
     <>
       <div
@@ -10,8 +16,10 @@ export default function TestCard({ data, color }: { data: products.Product, colo
         className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
       >
         <div className="font-medium inline m-auto text-center">
-          <p className="uppercase text-m tracking-[0.16em]">{data.name} {color}</p>
-          <h3 className="text-4xl font-normal">{data.description}</h3>
+          <p className="uppercase text-m tracking-[0.16em]">
+            {data.name} {color}
+          </p>
+          <h3 className="text-4xl font-normal">Magic V2</h3>
         </div>
         <Link
           className="relative mt-8 bg-foreground/10 rounded-2xl sm:w-[19rem] w-full"
@@ -25,17 +33,15 @@ export default function TestCard({ data, color }: { data: products.Product, colo
             <span>{data.price!.price}</span>
           </b>
           <Image
-          alt={data.name!}
-          src={
-        color === 'Black'
-          ? 'https://media.discordapp.net/attachments/1019381524149305426/1165122987087900692/mousepad-black-3.png?ex=6545b457&is=65333f57&hm=b97968d9da593bb97d65763980dcfcc5a7fc63131578e3c4e7c9fe39124eb312&=&width=472&height=473'
-          : color === 'Azul'
-          ? 'https://media.discordapp.net/attachments/1019381524149305426/1165122988228739162/mousepad-blue-3.png?ex=6545b457&is=65333f57&hm=4a6d83a61bdf8a205e8e1088e999f2bab872f951dd8039b6ba9c2aed38364ebd&=&width=473&height=472'
-          : ""
-      }
-      className="z-0 h-4/5 object-cover hover:scale-105"
-    />
-  </Link>
+            alt={data.name!}
+            src={
+              color === "Red"
+                ? "https://static.wixstatic.com/media/b8c362_96d448439c5940cf9ddcfe275b9bef55~mv2.png/v1/fit/w_473,h_473,q_90/file.png"
+                : "https://static.wixstatic.com/media/b8c362_2ae4c79bf7a24bb6bb86dde0d68c93a9~mv2.png/v1/fit/w_473,h_473,q_90/file.png"
+            }
+            className="z-0 h-4/5 object-cover hover:scale-105"
+          />
+        </Link>
       </div>
     </>
   );

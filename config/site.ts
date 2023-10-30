@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Magic by Zeko",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "Nos encontramos enfocados al máximo en crear y construir mousepads orientados al deporte competitivo profesional en sus diferentes entregas.",
   navItems: [
     {
       label: "Inicio",
@@ -22,11 +22,3 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/magicbyzeko/"
   },
 };
-
-//   links: {
-// 	github: "https://github.com/nextui-org/nextui",
-// 	twitter: "https://twitter.com/getnextui",
-// 	docs: "https://nextui-docs-v2.vercel.app",
-// 	discord: "https://discord.gg/9b6yyZKmH4",
-// sponsor: "https://patreon.com/jrgarciadev"
-// }

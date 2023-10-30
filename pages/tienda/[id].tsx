@@ -1,15 +1,14 @@
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProductAllData from "@/components/product-all-data";
-import ProductCard from "@/components/product-card";
 import IconsSection from "@/components/icons-section";
-import TiposSection from "@/components/types-section";
+import TypesSection from "@/components/types-section";
 import SizeSection from "@/components/size-section";
 import VideoSection from "@/components/video-section";
 import { Divider } from "@nextui-org/react";
-import { type Product } from "@/pages/types.d";
 
-import { getWixClient } from "@/pages/hooks/useWixClientServer";
+import { getWixClient } from "@/hooks/useWixClientServer";
+import { products } from "@wix/stores";
 
 export async function getStaticPaths() {
   const wixClient = await getWixClient();
@@ -44,7 +43,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 import { Outfit } from "next/font/google";
 const outfit = Outfit({ subsets: ["latin"] });
 
-export default function Page({ product }: { product: Product }) {
+export default function Page({ product }: { product: products.Product }) {
   return (
     <>
       <Navbar />
@@ -55,10 +54,10 @@ export default function Page({ product }: { product: Product }) {
         <Divider />
         <SizeSection />
         <Divider />
-        <TiposSection />
+        <TypesSection />
         <VideoSection />
       </main>
-      <Footer />
+      <Footer showAllInputs={false} />
     </>
   );
 }

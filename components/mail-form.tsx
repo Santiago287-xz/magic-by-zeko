@@ -1,26 +1,22 @@
 import { Input, Spinner, Button, Textarea } from "@nextui-org/react";
 import React, { useState, FormEvent } from "react";
 
-export default function MailForm({
-  showAllInputs,
-}: {
-  showAllInputs: boolean;
-}) {
+export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [text, setText] = useState("");
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
-    const target = event.nativeEvent.target as HTMLFormElement;
-    let user;
     setIsLoading(true);
-    if (target instanceof HTMLFormElement) {
-      user = {
-        email: (target[0] as HTMLInputElement).value,
-        name: (target[1] as HTMLInputElement).value,
-        text: (target[2] as HTMLInputElement).value,
-      };
-    }
+
+    const user = {
+      email,
+      name,
+      text,
+    };
 
     const response = await fetch("/api/submit", {
       method: "POST",
@@ -33,58 +29,78 @@ export default function MailForm({
 
   return (
     <form
-      className="flex flex-col items-center gap-4 md:gap-8 justify-center py-16 bg-white dark:bg-transparent p-4"
+      className="flex flex-col items-center gap-4 md:gap-8 justify-center p-4"
       onSubmit={onSubmit}
     >
-      <h1 className="text-lg md:text-xl lg:text-4xl text-center tracking-wide text-foreground-800 ">
-        Suscribite a nuestro newsletter
+      <h1 className="text-lg md:text-xl lg:text-4xl text-center tracking-wide text-foreground-800">
+        {showAllInputs
+          ? "Contactate con Nosotros"
+          : "Suscribite a nuestro newsletter"}
       </h1>
       <p className="uppercase text-center tracking-[0.16em] text-foreground-700 lg:text-xs">
-        ¿Quieres recibir nuestras promociones? ¡Suscríbete!
+        {showAllInputs
+          ? "Completa los campos asi nos ponemos en contacto !Te atenderemos!"
+          : "¿Quieres recibir nuestras promociones? ¡Suscríbete!"}
       </p>
-      <section className="flex flex-wrap justify-center gap-2 w-full sm:w-4/5 lg:w-auto">
-        <div className="flex flex-wrap gap-4 w-full">
-          <div className="flex flex-wrap md:flex-nowrap gap-4 w-full">            
+
+      {showAllInputs ? (
+        <div className="flex flex-wrap gap-2 w-full max-w-lg">
+          <div className="flex gap-4 w-full">
             <Input
-                name="email"
-                label="Email"
-                placeholder="Ingrese su email"
-                className="w-full"
-              />
-            <div className="w-full h-auto flex flex-wrap justify-end content-center"> 
-              <Button className="w-full md:w-2/5 px-8 bg-transparent hover:bg-foreground-100 border-2 transition">
-                {isLoading ? (
-                  <Spinner />
-                ) : isSubscribed ? (
-                  "!Suscrito!"
-                ) : (
-                  "Suscribirse"
-                )}
-              </Button>
-              </div>
-
-              {showAllInputs && (
-                <div className="flex flex-wrap gap-4 w-full">
-                <div className="flex flex-wrap md:flex-nowrap gap-4 w-full">
-                  <Input
-                    name="name"
-                    label="Nombre completo"
-                    placeholder="Ingrese su nombre"
-                    className="w-full"
-                  />
-
-                  <Textarea
-                    name="question"
-                    label="Pregunta"
-                    placeholder="Ingrese pregunta"
-                    className="w-full"
-                  />
-                </div>
-                </div>
-              )}
+              isRequired
+              type="email"
+              variant="bordered"
+              className="w-full max-w-lg"
+              label="Email"
+              placeholder="Ingrese su email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+              isRequired
+              type="text"
+              variant="bordered"
+              className="w-full max-w-lg"
+              label="Nombre completo"
+              placeholder="Ingrese su nombre"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
+          <Textarea
+            isRequired
+            label="Pregunta"
+            variant="bordered"
+            placeholder="Ingrese pregunta"
+            className="w-full max-w-lg"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
         </div>
-      </section>
+      ) : (
+        <Input
+          isRequired
+          type="email"
+          variant="bordered"
+          className="w-full max-w-lg"
+          label="Email"
+          placeholder="Ingrese su email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      )}
+
+      <div className="flex justify-center">
+        <Button className="w-48" type="submit">
+          {isLoading ? (
+            <Spinner />
+          ) : isSubscribed ? (
+            "!Suscrito!"
+          ) : (
+            "Subscribete"
+          )}
+        </Button>
+      </div>
     </form>
   );
 }

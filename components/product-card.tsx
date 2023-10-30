@@ -11,8 +11,8 @@ export default function ProductCard({ data }: { data: products.Product }) {
         className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
       >
         <div className="font-medium inline m-auto text-center">
-          <p className="uppercase text-m tracking-[0.16em]">{data.name} Red</p>
-          <h3 className="text-4xl font-normal">{data.description}</h3>
+          <p className="uppercase text-m tracking-[0.16em]">{data.name} Black</p>
+          <h3 className="text-4xl font-normal">Magic V2</h3>
         </div>
         <Link
           className="relative mt-8 bg-foreground/10 rounded-2xl sm:w-[19rem] w-full"

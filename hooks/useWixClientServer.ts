@@ -9,7 +9,7 @@ import {
   orders as eventOrders,
 } from '@wix/events';
 
-export const getWixClient = async () => {
+export async function getWixClient() {
   let refreshToken;
   try {
     refreshToken = JSON.parse('{}');
@@ -36,4 +36,4 @@ export const getWixClient = async () => {
     }),
   });
   return wixClient;
-};
+}

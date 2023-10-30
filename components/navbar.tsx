@@ -8,6 +8,7 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
+  Image
 } from "@nextui-org/react";
 
 import { siteConfig } from "@/config/site";
@@ -42,7 +43,7 @@ export const Navbar = () => {
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand className="gap-3 max-w-fit">
             <NextLink href="/">
-              <img src={imageUrl} alt="Logo" width={40} height={40} />
+              <Image src={imageUrl} alt="Logo" className="rounded-none" width={40} height={40} />
             </NextLink>
           </NavbarBrand>
           <div className="hidden lg:flex gap-2 justify-start ml-2">
