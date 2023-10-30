@@ -11,22 +11,22 @@ import { getWixClient } from "@/hooks/useWixClientServer";
 import { products } from "@wix/stores";
 
 export async function getStaticPaths() {
+  const wixClient = await getWixClient();
   let paths;
-  // const wixClient = await getWixClient();
-  // paths = await wixClient.products
-  //   .queryProducts()
-  //   .limit(10)
-  //   .find()
-  //   .then(({ items }) => {
-  //     return items.map((product) => ({
-  //       params: { id: product.slug },
-  //     }));
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //     paths = [];
-  //   });
-  paths = [{ params: { id: "mouse-pad-red" } }];
+  paths = await wixClient.products
+    .queryProducts()
+    .limit(10)
+    .find()
+    .then(({ items }) => {
+      return items.map((product) => ({
+        params: { id: product.slug },
+      }));
+    })
+    .catch((err) => {
+      console.error(err);
+      paths = [""];
+    });
+    console.log(paths) // [ { params: { id: 'mouse-pad-red' } } ]
   return { paths, fallback: false };
 }
 
