@@ -27,15 +27,6 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
     setIsSubscribed(true);
   }
 
-  let buttonText;
-  if (isLoading) {
-    buttonText = <Spinner />;
-  } else if (isSubscribed) {
-    buttonText = showAllInputs ? "Enviado" : "Suscrito";
-  } else {
-    buttonText = showAllInputs ? "Enviar" : "Subscribete !";
-  }
-
   return (
     <form
       className="flex flex-col items-center gap-4 md:gap-8 justify-center p-4"
@@ -97,8 +88,14 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
       )}
 
       <div className="flex justify-center">
-      <Button className="w-42" type="submit" variant="faded" disabled={isLoading || isSubscribed}>
-        {buttonText}
+      <Button className="w-42" type="submit" variant="faded" isLoading={isLoading} disabled={isLoading || isSubscribed}>
+      {isSubscribed ? (
+          "Enviado !"
+        ) : showAllInputs ? (
+          "Enviar"
+        ) : (
+          "Subscribete"
+        )}
       </Button>
       </div>
     </form>
