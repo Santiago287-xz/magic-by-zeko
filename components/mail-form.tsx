@@ -27,7 +27,7 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
     setIsSubscribed(true);
   }
 
-  let buttonText = "";
+  let buttonText;
   if (isLoading) {
     buttonText = <Spinner />;
   } else if (isSubscribed) {
