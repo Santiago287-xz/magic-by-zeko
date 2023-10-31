@@ -36,7 +36,7 @@ export const Navbar = () => {
     <>
       <NextUINavbar
         className="backdrop-blur-sm border-b border-foreground/10 animate-fade-down animate-duration-[350ms] 
-      animate-delay-100 bg-[#ebeff3db] dark:bg-background/95"
+      animate-delay-100 bg-[#ebeff3db] dark:bg-background/95 z-[200000]"
         maxWidth="xl"
         position="sticky"
       >

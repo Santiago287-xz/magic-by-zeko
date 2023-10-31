@@ -26,7 +26,6 @@ export async function getStaticPaths() {
       console.error(err);
       paths = [""];
     });
-    console.log(paths) // [ { params: { id: 'mouse-pad-red' } } ]
   return { paths, fallback: false };
 }
 

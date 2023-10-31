@@ -20,15 +20,19 @@ export default function SizeSection() {
           </ul>
         </article>
         <div>
-          <Image alt={'size-image'} src={'https://media.discordapp.net/attachments/1019381524149305426/1165126923685474404/mousepad-size.png?ex=6545b801&is=65334301&hm=27b54110eb5aaff0896ced392aeddbcc2c42286d5380320b9139e0eaad7b2805&=&width=947&height=670'} className="h-auto max-h-[500px] my-8 object-contain" />
+          <Image
+            alt={"size-image"}
+            src={
+              "https://media.discordapp.net/attachments/1019381524149305426/1165126923685474404/mousepad-size.png?ex=6545b801&is=65334301&hm=27b54110eb5aaff0896ced392aeddbcc2c42286d5380320b9139e0eaad7b2805&=&width=947&height=670"
+            }
+            className="h-auto max-h-[500px] my-8 object-contain"
+          />
         </div>
         <div>
           <span className="font-bold text-md md:text-xl lg:text-2xl text-foreground-500">
-            Garantia
+            Garantía
           </span>
-          <h3 className="font-bold text-xl md:text-2xl lg:text-4xl">
-            6 Meses
-          </h3>
+          <h3 className="font-bold text-xl md:text-2xl lg:text-4xl">6 Meses</h3>
         </div>
       </main>
     </section>

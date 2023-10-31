@@ -6,7 +6,7 @@ export default function IconsSection() {
       <ul className="flex flex-wrap justify-evenly gap-2 py-12 sm:py-20 text-center">
         <li className="flex flex-col items-center text-slate-200">
           <PadIcon />
-          <h6 className="mt-4 text-lg font-bold ">Caucho antidezlizante</h6>
+          <h6 className="mt-4 text-lg font-bold ">Caucho antideslizante</h6>
           <p className="mt-2 text-slate-400">Comodidad óptima</p>
         </li>
         <li className="flex flex-col items-center text-slate-200">
@@ -21,8 +21,8 @@ export default function IconsSection() {
         </li>
         <li className="flex flex-col items-center text-slate-200">
           <PadCheckIcon />
-          <h6 className="mt-4 text-lg font-bold">Mejor Deslizamiento</h6>
-          <p className="mt-2 text-slate-400">Precisión insuperable</p>
+          <h6 className="mt-4 text-lg font-bold">Mayor durabilidad</h6>
+          <p className="mt-2 text-slate-400">Construcción sólida</p>
         </li>
       </ul>
     </section>

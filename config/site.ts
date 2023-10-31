@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       label: "Tienda",
-      href: "/tienda/prod_OgaEMmLdWZvxde",
+      href: "/tienda/magic-control",
     },
     {
       label: "Ayuda",
@@ -19,6 +19,7 @@ export const siteConfig = {
   ],
   links: {
     twitter: "https://twitter.com/MagicByZeko",
-    instagram: "https://www.instagram.com/magicbyzeko/"
+    instagram: "https://www.instagram.com/magicbyzeko/",
+    webcodebuilders: "https://www.instagram.com/webcode__/",
   },
 };

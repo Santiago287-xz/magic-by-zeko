@@ -11,7 +11,7 @@ export default function PresentationVideo() {
       className="rounded-none z-0 object-cover h-24 w-auto sm:h-24 sm:w-auto md:h-32 md:w-auto lg:h-40 lg:w-auto xl:h-48 xl:w-auto"
       />
       <Button
-        href="/tienda/prod_OgaEMmLdWZvxde"
+        href="/tienda/magic-control"
         as={Link}
         className="mx-auto mt-8 z-20 py-6 px-4 sm:py-6 sm:px-4 md:py-6 md:px-6 lg:py-8 lg:px-8 xl:py-8  xl:px-8  shadow-md hover:shadow-lg bg-white text-black font-bold"
         >

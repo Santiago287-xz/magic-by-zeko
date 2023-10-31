@@ -1,6 +1,7 @@
 import { Button, Link, Image } from "@nextui-org/react";
 import MailForm from "@/components/mail-form";
 import { TwitterIcon, InstagramIcon } from "@/components/icons";
+import { siteConfig } from "@/config/site";
 
 export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
   return (
@@ -24,20 +25,16 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
               <p className="text-slate-400 text-xl text-center w-max">
                 ¿Tienes alguna pregunta o comentario?
               </p>
-              <Button
-                as={Link}
-                className="flex items-center gap-1 justify-start text-slate-200"
-                variant="light"
+              <p
+                className="flex items-center gap-4 justify-start text-slate-200"
               >
                 magicbyzeko@gmail.com
-              </Button>
-              <Button
-                as={Link}
-                className="flex items-center gap-1 justify-start text-slate-200"
-                variant="light"
+              </p>
+              <p
+                className="flex items-center gap-4 justify-start text-slate-200"
               >
                 Envíos a todo Argentina garantizados.
-              </Button>
+              </p>
             </div>
           </div>
         </div>
@@ -49,24 +46,16 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
           height={255}
         />
         <div className="flex items-center gap-4 mt-4">
-          <a
-            href="https://www.facebook.com/tupagina"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon className="w-6 h-6 text-white" />
-          </a>
-          <a
-            href="https://www.twitter.com/tupagina"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TwitterIcon className="w-8 h-8 text-white" />
-          </a>
+        <Link isExternal href={siteConfig.links.twitter}>
+              <TwitterIcon className="w-8 h-8 text-foreground" />
+            </Link>
+            <Link isExternal href={siteConfig.links.instagram}>
+              <InstagramIcon className="w-6 h-8  text-foreground" />
+            </Link>
         </div>
         <div>
           <Link
-            href="https://webcodebuilders.repl.co/"
+            isExternal href={siteConfig.links.webcodebuilders}
             className="flex items-center gap-1 text-current"
           >
             <span className="text-zinc-200">Powered by</span>

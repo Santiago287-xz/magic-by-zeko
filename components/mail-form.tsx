@@ -27,6 +27,15 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
     setIsSubscribed(true);
   }
 
+  let buttonText = "";
+  if (isLoading) {
+    buttonText = <Spinner />;
+  } else if (isSubscribed) {
+    buttonText = showAllInputs ? "Enviado" : "Suscrito";
+  } else {
+    buttonText = showAllInputs ? "Enviar" : "Subscribete !";
+  }
+
   return (
     <form
       className="flex flex-col items-center gap-4 md:gap-8 justify-center p-4"
@@ -49,20 +58,18 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
             <Input
               isRequired
               type="email"
-              variant="bordered"
+              variant="faded"
               className="w-full max-w-lg"
               label="Email"
-              placeholder="Ingrese su email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <Input
               isRequired
               type="text"
-              variant="bordered"
+              variant="faded"
               className="w-full max-w-lg"
               label="Nombre completo"
-              placeholder="Ingrese su nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -70,7 +77,7 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
           <Textarea
             isRequired
             label="Pregunta"
-            variant="bordered"
+            variant="faded"
             placeholder="Ingrese pregunta"
             className="w-full max-w-lg"
             value={text}
@@ -81,25 +88,18 @@ export default function MailForm({ showAllInputs }: { showAllInputs: boolean }) 
         <Input
           isRequired
           type="email"
-          variant="bordered"
+          variant="faded"
           className="w-full max-w-lg"
           label="Email"
-          placeholder="Ingrese su email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       )}
 
       <div className="flex justify-center">
-        <Button className="w-48" type="submit">
-          {isLoading ? (
-            <Spinner />
-          ) : isSubscribed ? (
-            "!Suscrito!"
-          ) : (
-            "Subscribete"
-          )}
-        </Button>
+      <Button className="w-42" type="submit" variant="faded" disabled={isLoading || isSubscribed}>
+        {buttonText}
+      </Button>
       </div>
     </form>
   );

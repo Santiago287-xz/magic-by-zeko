@@ -14,7 +14,7 @@ export default function ProductCatalog({ posts }: { posts: products.Product[] })
             <p className="text-xl md:text-1xl lg:text-2xl pb-8 text-foreground-500 hidden sm:flex flex-col">
               La elección perfecta para gamers y profesionales:{" "}
               <span className="font-medium text-foreground-600">
-                Mouse Pads de calidad
+                Mousepads de calidad
               </span>
             </p>
           </div>
