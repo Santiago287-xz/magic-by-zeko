@@ -1,8 +1,13 @@
 import ProductCard from "@/components/product-card";
-import TestCard from "@/components/test-card"
-import { products } from '@wix/stores';
+import TestCard from "@/components/test-card";
+import { products } from "@wix/stores";
 
-export default function ProductCatalog({ posts }: { posts: products.Product[] }) {
+export default function ProductCatalog({
+  posts,
+}: {
+  posts: products.Product[];
+}) {
+  console.log(posts);
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pb-12">
       <div className="flex flex-wrap flex-row content-center justify-center w-11/12">
@@ -20,13 +25,17 @@ export default function ProductCatalog({ posts }: { posts: products.Product[] })
           </div>
         </div>
         {posts.map((product) => (
-          <ProductCard key={product._id} data={product} />
-        ))}
-        {posts.map((product) => (
-        <TestCard key={product._id} data={product} color='Red'/>
-        ))}
-        {posts.map((product) => (
-        <TestCard key={product._id} data={product} color='Azul'/>
+          <div key={product._id} className="flex flex-wrap flex-row content-center justify-center">
+            {product.productOptions![0].choices!.map((productColorOption) => (
+              <TestCard
+                key={product._id + productColorOption.description!}
+                data={product}
+                color={productColorOption.description!}
+                imageUrl={productColorOption.media!.mainMedia!.image!.url!}
+                discountedPrice={product.priceData!.formatted!.discountedPrice!}
+              />
+            ))}
+          </div>
         ))}
       </div>
     </section>

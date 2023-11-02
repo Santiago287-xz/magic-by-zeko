@@ -49,7 +49,7 @@ export const Navbar = () => {
           <div className="hidden lg:flex gap-2 justify-start ml-2">
             {siteConfig.navItems.map((item) => (
               <NavbarItem key={item.href}>
-                <Button href={item.href} as={Link} variant="light">
+                <Button href={item.href} as={Link} variant="light" className="text-lg">
                   {item.label}
                 </Button>
               </NavbarItem>

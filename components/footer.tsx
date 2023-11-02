@@ -47,10 +47,10 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
         />
         <div className="flex items-center gap-4 mt-4">
         <Link isExternal href={siteConfig.links.twitter}>
-              <TwitterIcon className="w-8 h-8 text-foreground" />
+              <TwitterIcon className="w-8 h-8 text-white" />
             </Link>
             <Link isExternal href={siteConfig.links.instagram}>
-              <InstagramIcon className="w-6 h-8  text-foreground" />
+              <InstagramIcon className="w-6 h-8 text-white" />
             </Link>
         </div>
         <div>

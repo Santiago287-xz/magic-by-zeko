@@ -4,15 +4,18 @@ import { products } from "@wix/stores";
 
 export default function TestCard({
   data,
+  discountedPrice,
   color,
+  imageUrl,
 }: {
   data: products.Product;
+  discountedPrice: string;
   color: string;
+  imageUrl: string;
 }) {
   return (
     <>
       <div
-        key={data._id}
         className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
       >
         <div className="font-medium inline m-auto text-center">
@@ -29,16 +32,11 @@ export default function TestCard({
             className="bg-zinc-950 text-white border-white dark:border-zinc-900  border-5
           py-1 px-4 rounded-3xl flex items-center translate-x-[-50%] translate-y-[-50%] absolute top-[-.5rem] left-[50%] z-30"
           >
-            <span>$</span>
-            <span>{data.price!.price}</span>
+            <span>{discountedPrice}</span>
           </b>
           <Image
             alt={data.name!}
-            src={
-              color === "Red"
-                ? "https://static.wixstatic.com/media/b8c362_96d448439c5940cf9ddcfe275b9bef55~mv2.png/v1/fit/w_473,h_473,q_90/file.png"
-                : "https://static.wixstatic.com/media/b8c362_2ae4c79bf7a24bb6bb86dde0d68c93a9~mv2.png/v1/fit/w_473,h_473,q_90/file.png"
-            }
+            src={imageUrl}
             className="z-0 h-4/5 object-cover hover:scale-105"
           />
         </Link>

@@ -22,8 +22,7 @@ export default function ProductCard({ data }: { data: products.Product }) {
             className="bg-zinc-950 text-white border-white dark:border-zinc-900  border-5
           py-1 px-4 rounded-3xl flex items-center translate-x-[-50%] translate-y-[-50%] absolute top-[-.5rem] left-[50%] z-30"
           >
-            <span>$</span>
-            <span>{data.price!.price}</span>
+            <span>{data.priceData!.formatted!.discountedPrice}</span>
           </b>
           <Image
             alt={data.name!}
