@@ -143,7 +143,7 @@ export default function ProductAllData({
           />
         </div>
         <p className="text-xl text-foreground/70 grid text-end">
-          Precio
+          Precio Total
           {selected_product.price!.formatted!.discountedPrice ==
           selected_product.price!.formatted!.price ? (
             <b className={"text-green-500 text-2xl"}>
