@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       label: "Tienda",
-      href: "/tienda/mouse-pad-red",
+      href: "/tienda/magic-control",
     },
     {
       label: "Ayuda",
