@@ -21,7 +21,7 @@ export default function PresentationVideo() {
     </div>
       <div className="top-0 relative h-screen w-full z-1">
         <video
-          className="w-full h-screen object-cover opacity-10 absolute"
+          className="w-full h-screen object-cover opacity-5 absolute"
           disableRemotePlayback
           preload="metadata"
           loop
