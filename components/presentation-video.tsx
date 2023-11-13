@@ -30,7 +30,7 @@ export default function PresentationVideo() {
         >
           <source
             src="https://cdn.discordapp.com/attachments/1019381524149305426/1169755820913864734/C3927_-_Compressed_with_FlexClip_1.mp4?ex=65568f00&is=65441a00&hm=303eb9291d5385f6b1ee285cf18519b4f7e6c580897ddb6f415b3f78e57f2638&"
-            type="video/webm"
+            type="video/mp4"
           ></source>
           {/* <source
             src="http://magicbyz.wwwaz1-ts114.a2hosted.com/presentation-video.mp4"
