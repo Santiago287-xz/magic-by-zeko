@@ -37,7 +37,7 @@ export default function TestCard({
           <Image
             alt={data.name!}
             src={imageUrl}
-            className="z-0 h-4/5 object-cover hover:scale-105"
+            className="z-0 w-full object-cover hover:scale-105"
           />
         </Link>
       </div>

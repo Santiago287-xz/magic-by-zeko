@@ -7,7 +7,6 @@ export default function ProductCatalog({
 }: {
   posts: products.Product[];
 }) {
-  console.log(posts);
   return (
     <section className="flex flex-col items-center justify-center gap-4 md:pb-12">
       <div className="flex flex-wrap flex-row content-center justify-center w-11/12">
