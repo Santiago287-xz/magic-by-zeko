@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
 
-const resend = new Resend("re_AxZgd4HL_A9GUH5FW1L7Ls1asD67FqihQ");
+const resend = new Resend("re_BGyoSXGJ_5AjRVsFyjLQJmqgxQ6a9E9rD");
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
     const reqData = JSON.parse(req.body);
@@ -62,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "safaballe@gmail.com",
+      to: "magicbyzeko@gmail.com",
       subject: "Consulta",
       html: htmlCode,
     });
