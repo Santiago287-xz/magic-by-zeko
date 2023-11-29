@@ -23,7 +23,7 @@ export default function SizeSection() {
           <Image
             alt={"size-image"}
             src={
-              "https://media.discordapp.net/attachments/1019381524149305426/1165126923685474404/mousepad-size.png?ex=6545b801&is=65334301&hm=27b54110eb5aaff0896ced392aeddbcc2c42286d5380320b9139e0eaad7b2805&=&width=947&height=670"
+              "https://i.imgur.com/S6bITr3.png"
             }
             className="h-auto max-h-[500px] my-8 object-contain"
           />

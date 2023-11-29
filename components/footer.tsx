@@ -14,7 +14,7 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
               <p className="text-slate-400 text-xl">Métodos de Pago</p>
               <div className="flex items-center justify-center gap-4">
                 <Image
-                  src="https://media.discordapp.net/attachments/1019381524149305426/1165128333432987690/accepted-payments.png?ex=6545b951&is=65334451&hm=846936e1cf7365210d42bd519da506f7febcdca37460bd736830bc9fd75fae6c&="
+                  src="https://i.imgur.com/nKXwXtu.png"
                   alt="Método de Pago"
                   width={320}
                   height={320}
@@ -39,7 +39,7 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
           </div>
         </div>
         <Image
-          src="https://media.discordapp.net/attachments/1116888339967119460/1156796158295949322/MBZ-Blanco.png?ex=651991a0&is=65184020&hm=4fc8bb10c7cf1f23bd482d9c1fe6f935e97ebd813aee613507969f471fa23bc7&=&width=1020&height=379"
+          src="https://i.imgur.com/6JDNdRX.png"
           alt="Logo"
           className="rounded-none"
           width={225}

@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                                     <table width="100%">
                                         <tbody>
                                             <tr>
-                                                <td style="font-size: 0px;"><a target="_blank" href="https://viewstripo.email"><img src="https://media.discordapp.net/attachments/1019381524149305426/1162224380043087964/MBZ-Negro.png?ex=653b28cd&is=6528b3cd&hm=ef4adda76d714cf3e2e024760dc6c796b85bbdccd301d72779959d191389f7b7&=&width=1440&height=535" alt style="display: block;" width="280" class="adapt-img"></a></td>
+                                                <td style="font-size: 0px;"><a target="_blank" href="https://viewstripo.email"><img src="https://i.imgur.com/6JDNdRX.png" alt style="display: block;" width="280" class="adapt-img"></a></td>
                                             </tr>
                                             <tr>
                                                 <td align="center">

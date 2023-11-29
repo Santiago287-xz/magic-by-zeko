@@ -18,7 +18,7 @@ export default function GaleryPics() {
       grid: "sm:col-span-4",
       fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1149404211017175232/1168596488402780280/DSC06567_1.jpg?ex=6552574a&is=653fe24a&hm=696a3cee61f45e3ad3a7a68dccb7e3d09d0affd158c8efe5a82898d6eccbfcf5&=&width=1005&height=670",
+        "https://i.imgur.com/PeUDt9z.png",
     },
     {
       span: "MOUSEPAD BLUE",
@@ -26,7 +26,7 @@ export default function GaleryPics() {
       grid: "sm:col-span-4",
       fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1149404211017175232/1168596488880918539/DSC06561_1.jpg?ex=6552574a&is=653fe24a&hm=952f4fed357875d3d2b8dc91997ad1576e4899696b2d925faf3ecdf487bf390c&=&width=1005&height=670",
+        "https://i.imgur.com/uZNksc2.png",
     },
     {
       span: "MOUSEPAD BLACK",
@@ -34,7 +34,7 @@ export default function GaleryPics() {
       grid: "sm:col-span-4",
       fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1149404211017175232/1168596489593946154/DSC06565_1.jpg?ex=6552574a&is=653fe24a&hm=51eeff6aeaddaaef6b342d79bcfc341324267f0e4895e94fbcae0ecf15a935b2&=&width=1005&height=670",
+        "https://i.imgur.com/qRIBj0l.png",
     },
     {
       span: "",
@@ -42,7 +42,7 @@ export default function GaleryPics() {
       grid: "sm:col-span-5",
       fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1149404211017175232/1168596493553385592/tres_pads_zeko_1.jpg?ex=6552574b&is=653fe24b&hm=350e5345bf10b39be519e9daea18023a4d0946b2563628290f0ef404684ed733&=&width=1005&height=670",
+        "https://i.imgur.com/ZDfcMBy.png",
     },
     {
       span: "",
@@ -50,7 +50,7 @@ export default function GaleryPics() {
       grid: "sm:col-span-7",
       fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1149404211017175232/1168596487823953930/C3927.00_00_30_00.Imagen_fija001_2.jpg?ex=6552574a&is=653fe24a&hm=426a5dd0b0e51fc7bf9ad4796adc2a6b5fcb8a3ed42f2f0dbf020bebf170a6cd&=&width=1191&height=670",
+        "https://i.imgur.com/80nNILB.png",
     },
   ];
   return (
