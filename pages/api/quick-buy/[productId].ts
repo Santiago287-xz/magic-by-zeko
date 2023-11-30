@@ -52,8 +52,8 @@ export default async function handler(
     ecomCheckout: { checkoutId: checkout!._id! },
     callbacks: {
       postFlowUrl: baseUrl,
-      thankYouPageUrl: `${baseUrl}stores-success`,
-      cartPageUrl: `${baseUrl}cart`,
+      thankYouPageUrl: `${baseUrl}`,
+      cartPageUrl: `${baseUrl}`,
     },
   });
   return res.redirect(307, redirectSession!.fullUrl!);

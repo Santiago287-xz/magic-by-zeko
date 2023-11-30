@@ -23,6 +23,9 @@ export default function ProductCatalog({
             </p>
           </div>
         </div>
+        {/* {posts.map((product) => (
+          <ProductCard key={product._id} data={product}/> 
+        ))} */}
         {posts.map((product) => (
           <div key={product._id} className="flex flex-wrap flex-row content-center justify-center">
             {product.productOptions![0].choices!.map((productColorOption) => (

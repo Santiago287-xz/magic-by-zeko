@@ -35,6 +35,7 @@ const App = () => {
             className="w-full h-screen object-cover rounded-none opacity-30"
             src="https://i.imgur.com/ZDfcMBy.png"
             alt="Fallback Image"
+            loading="eager"
           />
         ) : (
           <video
