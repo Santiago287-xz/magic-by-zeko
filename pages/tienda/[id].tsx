@@ -5,10 +5,12 @@ import IconsSection from "@/components/icons-section";
 import TypesSection from "@/components/types-section";
 import SizeSection from "@/components/size-section";
 import VideoSection from "@/components/video-section";
+import GaleryPics from "@/components/galery-section";
 import { Divider } from "@nextui-org/react";
 
 import { getWixClient } from "@/hooks/useWixClientServer";
 import { products } from "@wix/stores";
+import React, { useState, useEffect } from "react";
 
 export async function getStaticPaths() {
   const wixClient = await getWixClient();
@@ -44,6 +46,14 @@ import { Outfit } from "next/font/google";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function Page({ product }: { product: products.Product }) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    );
+  }, []);
   return (
     <>
       <Navbar />
@@ -55,7 +65,8 @@ export default function Page({ product }: { product: products.Product }) {
         <SizeSection />
         <Divider />
         <TypesSection />
-        <VideoSection />
+        
+        {isMobile ? <GaleryPics/> : <VideoSection />}
       </main>
       <Footer showAllInputs={false} />
     </>

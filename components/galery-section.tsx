@@ -2,11 +2,7 @@ import React from "react";
 
 import {
   Card,
-  CardHeader,
-  CardFooter,
   Image,
-  Button,
-  Link,
   Divider,
 } from "@nextui-org/react";
 
