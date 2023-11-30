@@ -9,7 +9,7 @@ export default async function handler(
   const productId: string = req.query.productId as string;
   const STORES_APP_ID = "1380b703-ce81-ff05-f115-39571d94dfcd";
 
-  const requestUrl = "http://localhost:3000" + req.url;
+  const requestUrl = "http://magicbyzeko" + req.url;
   const baseUrl = new URL("/", requestUrl).toString();
   const { searchParams } = new URL(requestUrl);
   const quantity = parseInt(searchParams.get("quantity") || "1", 10);
