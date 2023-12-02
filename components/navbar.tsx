@@ -19,9 +19,9 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { TwitterIcon, InstagramIcon } from "@/components/icons";
 
 const lightLogoURL =
-  "https://i.imgur.com/YZlVtD7.png";
+  "https://i.imgur.com/mhTOV3F.png";
 const darkLogoURL =
-  "https://i.imgur.com/2krvdyW.png";
+  "https://i.imgur.com/js8aXPR.png";
 
 export const Navbar = () => {
   const [imageUrl, setImageUrl] = useState("");

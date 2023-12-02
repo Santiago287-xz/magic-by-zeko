@@ -17,8 +17,8 @@ const App = () => {
       <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center animate-fade-up z-20">
         <Image
           alt="Logo"
-          src="https://i.imgur.com/6JDNdRX.png"
-          className="rounded-none z-0 object-cover h-24 w-auto sm:h-24 sm:w-auto md:h-32 md:w-auto lg:h-40 lg:w-auto xl:h-48 xl:w-auto"
+          src="https://i.imgur.com/VCQJBQ8.png"
+          className="scale-150 rounded-none z-0 object-cover h-24 w-auto sm:h-24 sm:w-auto md:h-32 md:w-auto lg:h-40 lg:w-auto xl:h-48 xl:w-auto"
         />
         <Button
           href="/tienda/magic-control"
