@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { Image } from "@nextui-org/react";
 
 export default function SizeSection() {
@@ -22,9 +23,7 @@ export default function SizeSection() {
         <div>
           <Image
             alt={"size-image"}
-            src={
-              "https://i.imgur.com/S6bITr3.png"
-            }
+            src={siteConfig.images.padSize}
             className="h-auto max-h-[500px] my-8 object-contain"
           />
         </div>

@@ -23,11 +23,15 @@ export default function ProductCatalog({
             </p>
           </div>
         </div>
-        {/* {posts.map((product) => (
+        {/* Producto por producto ➡ {posts.map((product) => (
           <ProductCard key={product._id} data={product}/> 
         ))} */}
+        {/* Color por color ⬇ */}
         {posts.map((product) => (
-          <div key={product._id} className="flex flex-wrap flex-row content-center justify-center">
+          <div
+            key={product._id}
+            className="flex flex-wrap flex-row content-center justify-center"
+          >
             {product.productOptions![0].choices!.map((productColorOption) => (
               <TestCard
                 key={product._id + productColorOption.description!}

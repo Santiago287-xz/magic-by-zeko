@@ -15,9 +15,7 @@ export default function TestCard({
 }) {
   return (
     <>
-      <div
-        className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
-      >
+      <div className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900">
         <div className="font-medium inline m-auto text-center">
           <p className="uppercase text-m tracking-[0.16em]">
             {data.name} {color}

@@ -1,4 +1,4 @@
-import { Button, Link, Image } from "@nextui-org/react";
+import { Link, Image } from "@nextui-org/react";
 import MailForm from "@/components/mail-form";
 import { TwitterIcon, InstagramIcon } from "@/components/icons";
 import { siteConfig } from "@/config/site";
@@ -14,7 +14,7 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
               <p className="text-slate-400 text-xl">Métodos de Pago</p>
               <div className="flex items-center justify-center gap-4">
                 <Image
-                  src="https://i.imgur.com/nKXwXtu.png"
+                  src={siteConfig.images.paymentMethods}
                   alt="Método de Pago"
                   width={320}
                   height={320}
@@ -25,37 +25,34 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
               <p className="text-slate-400 text-xl text-center w-max">
                 ¿Tienes alguna pregunta o comentario?
               </p>
-              <p
-                className="flex items-center gap-4 justify-start text-slate-200"
-              >
-                magicbyzeko@gmail.com
+              <p className="flex items-center gap-4 justify-start text-slate-200">
+                {siteConfig.contact.gmail}
               </p>
-              <p
-                className="flex items-center gap-4 justify-start text-slate-200"
-              >
+              <p className="flex items-center gap-4 justify-start text-slate-200">
                 Envíos a todo Argentina garantizados.
               </p>
             </div>
           </div>
         </div>
         <Image
-          src="https://i.imgur.com/VCQJBQ8.png"
+          src={siteConfig.images.principalLogo}
           alt="Logo"
           className="rounded-none scale-150"
           width={225}
           height={255}
         />
         <div className="flex items-center gap-4 mt-4">
-        <Link isExternal href={siteConfig.links.twitter}>
-              <TwitterIcon className="w-8 h-8 text-white" />
-            </Link>
-            <Link isExternal href={siteConfig.links.instagram}>
-              <InstagramIcon className="w-6 h-8 text-white" />
-            </Link>
+          <Link isExternal href={siteConfig.links.twitter}>
+            <TwitterIcon className="w-8 h-8 text-white" />
+          </Link>
+          <Link isExternal href={siteConfig.links.instagram}>
+            <InstagramIcon className="w-6 h-8 text-white" />
+          </Link>
         </div>
         <div>
           <Link
-            isExternal href={siteConfig.links.webcodebuilders}
+            isExternal
+            href={siteConfig.links.webcodebuilders}
             className="flex items-center gap-1 text-current"
           >
             <span className="text-zinc-200">Powered by</span>

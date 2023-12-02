@@ -132,7 +132,10 @@ export default function ProductAllData({
         <h3 className="text-2xl md:text-4xl lg:text-5xl font-normal">
           {selected_product.name}
         </h3>
-        <p className="p-8 hidden md:block">Nuestro mousepad es una combinación de 2 telas (Control y Speed) las cuales otorgan la mejor precisión del mercado y una larga durabilidad.</p>
+        <p className="p-8 hidden md:block">
+          Nuestro mousepad es una combinación de 2 telas (Control y Speed) las
+          cuales otorgan la mejor precisión del mercado y una larga durabilidad.
+        </p>
       </div>
 
       <footer className="flex justify-around p-4 row-start-4 md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-3">

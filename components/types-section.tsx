@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { Image } from "@nextui-org/react";
 export default function TypesSection() {
   return (
@@ -5,7 +6,7 @@ export default function TypesSection() {
       <ul className="flex flex-wrap justify-evenly md:flex-nowrap gap-2 py-12 sm:py-20 text-center">
         <li className="flex flex-col items-center text-slate-200 max-w-[25rem]">
           <Image
-            src="https://i.imgur.com/UUSZmco.png"
+            src={siteConfig.images.padControl}
             alt="Descripción de la imagen"
             className="mr-4"
           />
@@ -21,7 +22,7 @@ export default function TypesSection() {
         </li>
         <li className="flex flex-col items-center text-slate-200 max-w-[25rem]">
           <Image
-            src="https://i.imgur.com/TK9LxKv.png"
+            src={siteConfig.images.padSpeed}
             alt="Descripción de la imagen"
             className="w-85 h-85 mr-4"
           />

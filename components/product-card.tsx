@@ -1,7 +1,6 @@
 import React from "react";
 import { Image, Link } from "@nextui-org/react";
-import { products } from '@wix/stores';
-
+import { products } from "@wix/stores";
 
 export default function ProductCard({ data }: { data: products.Product }) {
   return (
@@ -11,7 +10,9 @@ export default function ProductCard({ data }: { data: products.Product }) {
         className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-white dark:bg-zinc-900"
       >
         <div className="font-medium inline m-auto text-center">
-          <p className="uppercase text-m tracking-[0.16em]">{data.name} Black</p>
+          <p className="uppercase text-m tracking-[0.16em]">
+            {data.name} Black
+          </p>
           <h3 className="text-4xl font-normal">Magic V2</h3>
         </div>
         <Link

@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import React, { useEffect, useRef, useState } from "react";
 
 function VideoComponent() {
@@ -37,11 +38,10 @@ function VideoComponent() {
         muted
       >
         <source
-          src="https://prueba.santiagofama.repl.co/magic-video.mp4"
+          src={siteConfig.videos.padVideo}
           type="video/webm"
         ></source>
       </video>
-      {/* Más contenido de tu página */}
     </section>
   );
 }

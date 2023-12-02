@@ -1,6 +1,7 @@
 import { Button, Link, Image } from "@nextui-org/react";
 import { Cart } from "@/components/icons";
 import React, { useState, useEffect } from "react";
+import { siteConfig } from "@/config/site";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,7 +18,7 @@ const App = () => {
       <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center animate-fade-up z-20">
         <Image
           alt="Logo"
-          src="https://i.imgur.com/VCQJBQ8.png"
+          src={siteConfig.images.principalLogo}
           className="scale-150 rounded-none z-0 object-cover h-24 w-auto sm:h-24 sm:w-auto md:h-32 md:w-auto lg:h-40 lg:w-auto xl:h-48 xl:w-auto"
         />
         <Button
@@ -33,7 +34,7 @@ const App = () => {
         {isMobile ? (
           <Image
             className="w-full h-screen object-cover rounded-none opacity-30"
-            src="https://i.imgur.com/ZDfcMBy.png"
+            src={siteConfig.images.homeVideoImage}
             alt="Fallback Image"
             loading="eager"
           />
@@ -48,7 +49,7 @@ const App = () => {
             muted
           >
             <source
-              src="https://i.imgur.com/TYzbMiP.mp4"
+              src={siteConfig.videos.homeVideo}
               type="video/mp4"
             ></source>
           </video>
