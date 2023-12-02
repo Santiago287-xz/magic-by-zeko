@@ -39,9 +39,9 @@ export default function Footer({ showAllInputs }: { showAllInputs: boolean }) {
           </div>
         </div>
         <Image
-          src="https://i.imgur.com/6JDNdRX.png"
+          src="https://i.imgur.com/VCQJBQ8.png"
           alt="Logo"
-          className="rounded-none"
+          className="rounded-none scale-150"
           width={225}
           height={255}
         />
