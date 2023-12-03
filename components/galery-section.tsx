@@ -13,9 +13,9 @@ export default function GaleryPics() {
       <Divider />
       <div className="w-11/12 m-auto">
         <div className="flex flex-col w-4/5 m-auto">
-          <h2 className="w-full text-center sm:text-start text-4xl md:text-3xl lg:text-5xl py-8 sm:pb-2 text-zinc-200">
+          <h3 className="w-full text-center sm:text-start text-4xl md:text-3xl lg:text-5xl py-8 sm:pb-2 text-zinc-200">
             Galeria
-          </h2>
+          </h3>
           <p className="md:text-lg lg:text-xl text-zinc-400 hidden sm:flex flex-col pb-8">
             Experiencia gaming óptima, descubre nuestros:
             <span className="font-medium text-zinc-200">
