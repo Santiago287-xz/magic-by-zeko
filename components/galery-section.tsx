@@ -8,6 +8,48 @@ import {
 import { siteConfig } from "@/config/site";
 
 export default function GaleryPics() {
+  const data = [
+    {
+      span: "MOUSEPAD RED",
+      h4: "",
+      grid: "sm:col-span-4",
+      fotter: null,
+      image:
+        "https://i.imgur.com/PeUDt9z.png",
+    },
+    {
+      span: "MOUSEPAD BLUE",
+      h4: "",
+      grid: "sm:col-span-4",
+      fotter: null,
+      image:
+        "https://i.imgur.com/uZNksc2.png",
+    },
+    {
+      span: "MOUSEPAD BLACK",
+      h4: "",
+      grid: "sm:col-span-4",
+      fotter: null,
+      image:
+        "https://i.imgur.com/qRIBj0l.png",
+    },
+    {
+      span: "",
+      h4: "",
+      grid: "sm:col-span-5",
+      fotter: null,
+      image:
+        "https://i.imgur.com/ZDfcMBy.png",
+    },
+    {
+      span: "",
+      h4: "",
+      grid: "sm:col-span-7",
+      fotter: null,
+      image:
+        "https://i.imgur.com/80nNILB.png",
+    },
+  ];
   return (
     <section className="w-full bg-[#2b2b2b] dark:bg-[#0b0b0b]">
       <Divider />
@@ -25,7 +67,7 @@ export default function GaleryPics() {
         </div>
       </div>
       <main className="max-w-[900px] w-4/5 gap-2 grid grid-cols-12 grid-rows-2 pb-16 mx-auto justify-center rounded-md">
-        {siteConfig.galery.map((cart) => (
+        {data.map((cart) => (
           <Card
             key={cart.image}
             className={"col-span-12 h-[300px] bg-transparent " + cart.grid}
