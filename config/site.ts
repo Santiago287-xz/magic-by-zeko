@@ -45,43 +45,6 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/magicbyzeko/",
     webcodebuilders: "https://www.instagram.com/webcode__/",
   },
-  galery: [
-    {
-      span: "MOUSEPAD RED",
-      h4: "",
-      grid: "sm:col-span-4",
-      fotter: null,
-      image: "https://i.imgur.com/PeUDt9z.png",
-    },
-    {
-      span: "MOUSEPAD BLUE",
-      h4: "",
-      grid: "sm:col-span-4",
-      fotter: null,
-      image: "https://i.imgur.com/uZNksc2.png",
-    },
-    {
-      span: "MOUSEPAD BLACK",
-      h4: "",
-      grid: "sm:col-span-4",
-      fotter: null,
-      image: "https://i.imgur.com/qRIBj0l.png",
-    },
-    {
-      span: "",
-      h4: "",
-      grid: "sm:col-span-5",
-      fotter: null,
-      image: "https://i.imgur.com/ZDfcMBy.png",
-    },
-    {
-      span: "",
-      h4: "",
-      grid: "sm:col-span-7",
-      fotter: null,
-      image: "https://i.imgur.com/80nNILB.png",
-    },
-  ],
   contact: {
     gmail: "magicbyzeko@gmail.com",
   },

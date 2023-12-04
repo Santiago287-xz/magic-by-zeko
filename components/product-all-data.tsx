@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import { useEffect, useMemo, useState, Dispatch, SetStateAction } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -31,6 +32,7 @@ export default function ProductAllData({
 }: {
   selected_product: products.Product;
 }) {
+  console.log(selected_product)
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedVariant, setSelectedVariant] = useState<products.Variant>({});
   const [selectedOptions, setSelectedOptions] = useState<any>({});
