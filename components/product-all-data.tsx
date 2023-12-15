@@ -32,7 +32,6 @@ export default function ProductAllData({
 }: {
   selected_product: products.Product;
 }) {
-  console.log(selected_product)
   const [quantity, setQuantity] = useState<number>(1);
   const [selectedVariant, setSelectedVariant] = useState<products.Variant>({});
   const [selectedOptions, setSelectedOptions] = useState<any>({});

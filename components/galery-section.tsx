@@ -5,7 +5,6 @@ import {
   Image,
   Divider,
 } from "@nextui-org/react";
-import { siteConfig } from "@/config/site";
 
 export default function GaleryPics() {
   const data = [

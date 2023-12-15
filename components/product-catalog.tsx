@@ -1,4 +1,3 @@
-import ProductCard from "@/components/product-card";
 import TestCard from "@/components/test-card";
 import { products } from "@wix/stores";
 

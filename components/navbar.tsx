@@ -56,10 +56,10 @@ export const Navbar = () => {
         </NavbarContent>
 
         <NavbarContent
-          className="hidden sm:flex basis-1/5 sm:basis-full"
+          className="hidden lg:flex basis-1/5 sm:basis-full"
           justify="end"
         >
-          <NavbarItem className="hidden sm:flex gap-3">
+          <NavbarItem className="hidden lg:flex gap-3">
             <Link isExternal href={siteConfig.links.twitter}>
               <TwitterIcon className="w-8 h-8 text-foreground" />
             </Link>
@@ -70,7 +70,7 @@ export const Navbar = () => {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+        <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
           <ThemeSwitch />
           <NavbarMenuToggle />
         </NavbarContent>
