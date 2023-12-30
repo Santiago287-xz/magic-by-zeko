@@ -2,10 +2,10 @@ import { Button, Link } from "@nextui-org/react";
 import { useState } from "react";
 function ButtonCheckout({
   buy_now_link,
-  inStock
+  in_stock
 }: {
   buy_now_link: string;
-  inStock: boolean;
+  in_stock: boolean;
 }) {
   const [isLoading, setIsLoading] = useState(false);
   return (
@@ -15,14 +15,14 @@ function ButtonCheckout({
         isLoading={isLoading}
         onClick={() => setIsLoading(!isLoading)}
         href={buy_now_link}
-        isDisabled={!inStock}
+        isDisabled={!in_stock}
         color={"primary"}
         variant={"solid"}
         className="h-12 w-48 text-lg"
       >
         Comprar ahora
       </Button>
-      {inStock ? null : (
+      {in_stock ? null : (
         <small className="m-auto text-red-500 font-bold">Sin Stock</small>
       )}
     </div>

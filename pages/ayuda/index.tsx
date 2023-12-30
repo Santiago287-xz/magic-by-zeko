@@ -1,12 +1,10 @@
-import Footer from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import DefaultLayout from "@/layouts/default";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function Page() {
   return (
-    <>
-      <Navbar />
-      <main className="relative ">
+    <DefaultLayout showAllInputsFooter>
+      <main className="relative">
         <section className="flex flex-wrap flex-col justify-center p-4 rounded-lg w-auto md:w-4/5 m-auto">
           <p className="uppercase text-center tracking-[0.16em] text-foreground-700">
             FAQS
@@ -87,7 +85,6 @@ export default function Page() {
           </Accordion>
         </section>
       </main>
-      <Footer showAllInputs={true}/>
-    </>
+    </DefaultLayout>
   );
 }

@@ -42,8 +42,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
   return { props: { product } };
 }
 
-import { Outfit } from "next/font/google";
-const outfit = Outfit({ subsets: ["latin"] });
+import DefaultLayout from "@/layouts/default";
 
 export default function Page({ product }: { product: products.Product }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -55,9 +54,8 @@ export default function Page({ product }: { product: products.Product }) {
     );
   }, []);
   return (
-    <>
-      <Navbar />
-      <main className={outfit.className + " relative"}>
+    <DefaultLayout>
+      <main className="relative">
         <ProductAllData selected_product={product} />
         <Divider />
         <IconsSection />
@@ -65,10 +63,8 @@ export default function Page({ product }: { product: products.Product }) {
         <SizeSection />
         <Divider />
         <TypesSection />
-        
-        {isMobile ? <GaleryPics/> : <VideoSection />}
+        {isMobile ? <GaleryPics /> : <VideoSection />}
       </main>
-      <Footer showAllInputs={false} />
-    </>
+    </DefaultLayout>
   );
 }

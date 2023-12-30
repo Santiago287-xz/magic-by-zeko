@@ -22,8 +22,15 @@ export default function ProductCatalog({
             </p>
           </div>
         </div>
-        {/* Producto por producto ➡ {posts.map((product) => (
-          <ProductCard key={product._id} data={product}/> 
+        {/* Producto por producto ⬇ */}
+        {/* {posts.map((product) => (
+          <ProductCard
+            name={product.name!}
+            slug={product.slug!}
+            color={productColorOption.description!}
+            imageUrl={productColorOption.media!.mainMedia!.image!.url!}
+            discountedPrice={product.priceData!.formatted!.discountedPrice!}
+          />
         ))} */}
         {/* Color por color ⬇ */}
         {posts.map((product) => (
@@ -34,7 +41,8 @@ export default function ProductCatalog({
             {product.productOptions![0].choices!.map((productColorOption) => (
               <TestCard
                 key={product._id + productColorOption.description!}
-                data={product}
+                name={product.name!}
+                slug={product.slug!}
                 color={productColorOption.description!}
                 imageUrl={productColorOption.media!.mainMedia!.image!.url!}
                 discountedPrice={product.priceData!.formatted!.discountedPrice!}

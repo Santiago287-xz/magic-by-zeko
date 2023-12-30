@@ -143,7 +143,7 @@ export default function ProductAllData({
         <div className="flex content-end flex-wrap">
           <ButtonCheckout
             buy_now_link={buyNowLink}
-            inStock={isAvailableForPurchase!}
+            in_stock={isAvailableForPurchase!}
           />
         </div>
         <p className="text-xl text-foreground/70 grid text-end">

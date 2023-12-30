@@ -1,5 +1,6 @@
 import DefaultLayout from "@/layouts/default";
 import ProductCatalog from "@/components/product-catalog";
+import PresentationVideo from "@/components/presentation-video";
 import GaleryPics from "@/components/galery-section";
 
 import { getWixClient } from "@/hooks/useWixClientServer";
@@ -19,7 +20,10 @@ export async function getStaticProps() {
 export default function IndexPage({ posts }: { posts: products.Product[] }) {
   return (
     <DefaultLayout>
-      <ProductCatalog posts={posts} />
+      <PresentationVideo />
+      <main className="container mx-auto flex-grow">
+        <ProductCatalog posts={posts} />
+      </main>
       <GaleryPics />
     </DefaultLayout>
   );

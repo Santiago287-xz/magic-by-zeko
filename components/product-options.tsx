@@ -1,4 +1,3 @@
-"use client";
 import Swatch from "@/components/swatch";
 import { Option } from '@/components/drop-down-option';
 import { products } from "@wix/stores";
